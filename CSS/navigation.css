@@ -11,6 +11,13 @@ nav{
     background-color: #061320;
   
 }
+.title-p
+{    color: #36FBB1;
+    font-size: 3rem;
+    font-weight: 600;
+    padding-left: 5%;
+    padding-top:1%;
+}
 ul{
     list-style: none;
 }
