@@ -1,0 +1,117 @@
+.skills .wrap{
+    display: grid;
+    grid-template-areas: 'text iteams'
+                         'interest iteams';
+    align-items: center;
+    padding: 0px 50px;
+}
+.skills hr{
+    margin: 0;
+    width: 80%;
+}
+.skills .wrap > p{
+    grid-area: text;
+    width: 75%;
+    text-align: center;
+    color: #BAC3CF;
+    font-size: 1.4rem;
+    margin: 0 auto;
+}
+.interest{
+    grid-area: interest;
+    width: 75%;
+    min-height: 17vh;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: #F14B4B15;
+    border: 1px solid #F14B4B;
+    border-radius: 50px;
+    color: #F14B4B;
+    text-align: center;
+}
+
+.interest *{
+    margin: 0;
+}
+.interest h3{
+    font-size: 3rem;
+}
+.skillIteams{
+    grid-area: iteams;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3, auto);
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+.iteamCircle{
+    background-color: #F14B4B;
+    height: 80px;
+    width: 80px;
+    margin: 0 auto 5px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.iteamCircle img{
+    transition: 0.9s all ease-out;
+    height: 75%;
+}
+.iteamCircle:hover > img{
+    transform: rotate(360deg);
+    height: 60%;
+}
+.iteam p{
+    margin: 0% auto;
+    color: #E7E9E9;
+    text-align: center;
+}
+
+@media only screen and (max-width: 850px) {
+    .skills .wrap{
+        padding: 0 20px;
+    }
+    .skills .wrap > p{
+        width: 100%;
+    }
+    .interest{
+        width: 90%;
+    }
+    .iteamCircle{
+        height: 70px;
+        width: 70px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .skills .wrap{
+        grid-template-areas: 'text' 'iteams' 'interest';
+    }
+    .interest{
+        margin: 20px auto;
+        width: 75%;
+    }
+   
+}
+@media only screen and (max-width: 500px) {
+    .iteamCircle{
+        height: 60px;
+        width: 60px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .iteamCircle{
+        height: 50px;
+        width: 50px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .iteam p{
+        font-size: 0.8rem;
+    }
+}
